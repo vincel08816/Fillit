@@ -20,6 +20,7 @@
 # define __IS_SPACE(c) (c == 32 || (c > 8 && c < 14))
 # define BUFF_SIZE 1
 # define MAX_FD 65535
+
 typedef struct		s_list
 {
 	void			*content;
@@ -93,7 +94,6 @@ int					count_digits(int i);
 void				ft_swap(int *a, int *b);
 char				*char_remalloc(char *s, size_t n);
 char				*ft_combine(char *sum, char *append);
-size_t				strichr(char *s, char c);
-int				get_next_line(int const fd, char **line);
+int					get_next_line(int const fd, char **line);
 
 #endif

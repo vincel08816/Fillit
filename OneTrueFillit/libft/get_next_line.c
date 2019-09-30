@@ -28,6 +28,16 @@ static void		ft_combine2(char **tmp, char *buff)
 	free(del);
 }
 
+static size_t	strichr(char *s, char c)
+{
+	int		i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
 /*
 **	reject_line strdup's up to /n by using
 **	strichr to find the index of \n
@@ -93,12 +103,10 @@ int				get_next_line(int fd, char **line)
 
 /*
 **	#include <stdio.h>
-**	
 **	int main(int argc, char **argv)
 **	{
 **		char *line;
 **		int fd;
-**	
 **		fd = open(argv[1], O_RDONLY);
 **		if (argc != fd)
 **			line = NULL;
