@@ -35,7 +35,7 @@ int		main(int ac, char **av)
 	}
 	else
 	{
-		ft_putstr("error\n");
+		ft_putstr("usage: fillit input_file\n");
 		exit(1);
 	}
 	reset_board(0, board);
